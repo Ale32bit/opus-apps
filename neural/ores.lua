@@ -62,10 +62,10 @@ local function run()
       if not projecting[b.id] then
         projecting[b.id] = b
         b.box = canvas.addBox(
-          pos.x - offset.x + b.x + -(pos.x % 1) + .25,
-          pos.y - offset.y + b.y + -(pos.y % 1) + .25,
-          pos.z - offset.z + b.z + -(pos.z % 1) + .25,
-          .5, .5, .5, targets[b.name])
+          pos.x - offset.x + b.x + -(pos.x % 1),
+          pos.y - offset.y + b.y + -(pos.y % 1),
+          pos.z - offset.z + b.z + -(pos.z % 1),
+          1, 1, 1, targets[b.name])
         b.box.setDepthTested(false)
       end
     end
